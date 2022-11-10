@@ -17,5 +17,8 @@ public class Thrombolytic extends Medicine {
         return 41.0;
     }
 
-    
+    @Override
+    public MedicineSchedule getSchedule() {
+        return MedicineSchedule.Uncontrolled;
+    }
 }

@@ -7,3 +7,5 @@ I've seen similar with how C# treats "string" and "String".
 
 4. More an observation: why does Java require a string literal for the super constructor? I feel like taking the type name would
 make more sense (a la Python).
+
+5. Is Java's "abstract" somewhat equivalent to "virtual" in C++?
