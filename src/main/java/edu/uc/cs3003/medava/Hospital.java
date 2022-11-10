@@ -5,15 +5,14 @@ public class Hospital {
         name = hospitalName;
     }
 
+    
+
     void receive(Transporter t) {
-        while (!t.goods.isEmpty())
-        {
-            Medicine unloaded = t.goods.remove(0);
-            System.out.println(String.format("Receiving an %s.", unloaded.getMedicineName()));
+        while (!t.isEmpty()) {
+            Medicine unloaded = t.unload();
+            System.out.println(String.format("Receiving %s off the %s transporter.", unloaded.getMedicineName(), t.getTransporterName()));
         }
     }
-
-
     public String name() {
         return name;
     }
