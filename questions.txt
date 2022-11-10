@@ -1,0 +1,9 @@
+1. Are "double" and "Double" equivalent? It appears they are interoperable, but is one a "primative" while the other is a class?
+I've seen similar with how C# treats "string" and "String".
+
+2. Is the instance initializer necessaary with the constructor present?
+
+3. Is the instance initializer handled before or after the constructor?
+
+4. More an observation: why does Java require a string literal for the super constructor? I feel like taking the type name would
+make more sense (a la Python).
