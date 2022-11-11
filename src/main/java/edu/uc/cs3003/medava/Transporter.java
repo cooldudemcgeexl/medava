@@ -1,12 +1,10 @@
 package edu.uc.cs3003.medava;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class Transporter {
-    private ArrayList<Object> goods;
-    { goods = new ArrayList<Object>() {
+    private ArrayList<Shippable > goods;
+    { goods = new ArrayList<Shippable >() {
         
     };}
     public Transporter(String transporterName, double lowTemp, double highTemp) {
@@ -28,8 +26,12 @@ public class Transporter {
     private double mLowTemperature, mHighTemperature;
     
     
-    public boolean load(Object itemToLoad) {
-        try {
+    public boolean load(Shippable itemToLoad) {
+        if (itemToLoad.isTemperatureRangeAcceptable(mLowTemperature, mHighTemperature)) {
+            return goods.add(itemToLoad);
+        }
+        return false;
+        /* try {
             Method isTemperatureRangeAcceptableMethod = itemToLoad.getClass().getMethod("isTemperatureRangeAcceptable",
                     Double.class, Double.class);
             boolean resultOfMethodCall = (boolean) isTemperatureRangeAcceptableMethod.invoke(itemToLoad,
@@ -41,9 +43,9 @@ public class Transporter {
         } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
                 | InvocationTargetException e) {
             return false;
-        }
+        } */
     }
-    public Object unload() {
+    public Shippable unload() {
         return goods.remove(0);
     }
     public boolean isEmpty() {

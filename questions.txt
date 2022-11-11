@@ -14,3 +14,14 @@ make more sense (a la Python).
 
 7. How does scope work in try...catch? Is there a hidden lexical scope higher than the try block?
 
+8. Did interfaces arise due to a need to avoid rocky solutions such as interfaces?
+
+9. Do interfaces work in a way similar to how the reflection solution worked?
+
+10. How does implementing an interface differ from class inheritance from an ABC? From what I see, it looks like
+interfaces just define attributes that will be present, while classes add attributes, as well as method implementations.
+
+11. Are Java enumerations limited to just numerical values?
+
+
+
