@@ -7,7 +7,7 @@ public class Hospital {
 
     void receive(Transporter t) {
         while (!t.isEmpty()) {
-            Medicine unloaded = t.unload();
+            Medicine unloaded = (Medicine)t.unload();
             System.out.println(String.format("Checking whether Hospital can receive %s.", unloaded.getMedicineName()));
             if (unloaded.getSchedule() != MedicineSchedule.Uncontrolled) {
                 System.out.println(String.format("Hospital cannot receive controlled substances and %s is a %s.",

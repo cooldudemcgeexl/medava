@@ -9,3 +9,8 @@ I've seen similar with how C# treats "string" and "String".
 make more sense (a la Python).
 
 5. Is Java's "abstract" somewhat equivalent to "virtual" in C++?
+
+6. Does the try...catch block have performance implications?
+
+7. How does scope work in try...catch? Is there a hidden lexical scope higher than the try block?
+
