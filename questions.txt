@@ -1,5 +1,5 @@
 1. Are "double" and "Double" equivalent? It appears they are interoperable, but is one a "primative" while the other is a class?
-I've seen similar with how C# treats "string" and "String".
+I've seen similar with how C# treats "string" and "String". (NEVERMIND, I read further in the README!)
 
 2. Is the instance initializer necessaary with the constructor present?
 
